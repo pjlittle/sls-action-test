@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Testing Serverless Action
     steps:
+    - run: npm install 
     - name: Serverless Action
       id: sls
       uses: serverless/azure-build-task@release-v0.1.0
       with:
         yamlFile: 'serverless.yml'
-        
